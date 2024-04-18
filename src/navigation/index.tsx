@@ -18,7 +18,7 @@ export const Navigation = () => {
         initialRouteName={HomeScreenName}
         screenOptions={{
           headerStyle: {
-            backgroundColor: "tomato",
+            backgroundColor: "green",
           },
         }}
       >
