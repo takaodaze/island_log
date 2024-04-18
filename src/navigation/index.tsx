@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useTheme } from "@react-navigation/native";
 import { HomeScreen, HomeScreenName } from "../screen/Home";
 import { ProfileScreen, ProfileScreenName } from "../screen/Profile";
 import { HeaderlessScreen, HeaderlessScreenName } from "../screen/Headerless";
@@ -12,16 +12,10 @@ export type StackParamList = {
 export const Stack = createNativeStackNavigator<StackParamList>();
 
 export const Navigation = () => {
+  const theme = useTheme();
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName={HomeScreenName}
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "green",
-          },
-        }}
-      >
+    <NavigationContainer theme={theme}>
+      <Stack.Navigator initialRouteName={HomeScreenName}>
         <Stack.Screen
           name={HomeScreenName}
           component={HomeScreen}

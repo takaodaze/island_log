@@ -12,7 +12,7 @@ type HomeScreenProps = NativeStackScreenProps<
 export const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
   return (
     <View
-      height={"100vh"}
+      height={"100%"}
       flex={1}
       alignItems="center"
       justifyContent="center"
