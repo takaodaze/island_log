@@ -30,15 +30,15 @@ export default function App() {
   }
 
   return (
-    <TamaguiProvider
-      config={tamaguiConfig}
-      defaultTheme={colorScheme?.toString()}
-    >
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <TamaguiProvider
+        config={tamaguiConfig}
+        defaultTheme={colorScheme?.toString()}
+      >
         <Theme name="green">
           <Navigation />
         </Theme>
-      </ThemeProvider>
-    </TamaguiProvider>
+      </TamaguiProvider>
+    </ThemeProvider>
   );
 }
